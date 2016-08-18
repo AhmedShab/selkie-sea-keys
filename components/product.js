@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class Product extends Component {
 
   constructor (props) {
@@ -17,8 +18,13 @@ class Product extends Component {
   render () {
     return (
       <div>
-        <h1>Product is {this.props.name}</h1>
-        <button onClick={this.clickHandler}>Add To Cart</button>
+        <div>
+          <h1>{this.props.name}</h1>
+          <img src={this.props.image}/>
+        </div>
+        <div>
+          <button onClick={this.clickHandler}>Add To Cart</button>
+        </div>
       </div>
     )
   }

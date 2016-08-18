@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Product from './product';
+import Product from './product'
 
 class App extends Component {
 
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div>
         <h1>Welcome to {this.props.name}</h1>
-        <Product name='key' image='notImage' addCart={this.addToCart}/>
+        <Product name="Blackbeard's key" image='https://cdn-ssl.s7.disneystore.com/is/image/DisneyShopping/7509055880969?$yetidetail$' addCart={this.addToCart}/>
       </div>
     )
   }
