@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Product from './product';
-
+import Cart from './cart';
 class App extends Component {
 
   constructor (props) {
@@ -19,6 +19,7 @@ class App extends Component {
       <div>
         <h1>Welcome to {this.props.name}</h1>
         <Product name='key' image='notImage' addCart={this.addToCart}/>
+        <Cart items={this.state.cartProducts}/>
       </div>
     )
   }
