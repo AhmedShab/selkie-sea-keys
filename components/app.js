@@ -6,12 +6,14 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {cartProducts: []}
+    this.addToCart = this.addToCart.bind(this)
   }
 
   addToCart (product) {
     this.setState({
       cartProducts: [...this.state.cartProducts, product]
     })
+    console.log("this has been added", product)
   }
 
   render () {
