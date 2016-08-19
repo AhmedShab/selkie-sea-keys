@@ -7,15 +7,26 @@ class App extends Component {
 
   constructor (props) {
     super(props)
-    this.state = {cartProducts: []}
+    this.state = {cartProducts: [], totPrice: 0}
     this.addCart = this.addCart.bind(this)
   }
 
   addCart (product) {
+    if (product.state.amount === 0) {
+      return
+    }
    this.setState({
      cartProducts: [...this.state.cartProducts, product]
    })
-   console.log(product);
+ }
+
+ getTotalPrice(){
+   let addTotot = 0
+   this.state.cartProducts.map((product) => {addTotot += product.props.price})
+
+   console.log(addTotot);
+
+   return `total price: ${addTotot}`
  }
 
 
