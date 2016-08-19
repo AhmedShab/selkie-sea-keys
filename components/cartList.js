@@ -2,9 +2,12 @@ import React, { Component } from 'react'
 
 class CartList extends Component {
 
-  constructor (props) {
-    super(props)
-  }
+
+    constructor (props) {
+      super(props)
+      console.log(this.props.params);
+    }
+
 
   render () {
     return (
@@ -13,7 +16,6 @@ class CartList extends Component {
       </div>
     )
   }
-
 }
 
 export default CartList
