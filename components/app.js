@@ -6,7 +6,7 @@ class App extends Component {
 
   constructor (props) {
     super(props)
-    this.state = {amount: [], cartProducts: []} 
+    this.state = {amount: [], cartProducts: []}
     this.addToCart = this.addToCart.bind(this)
   }
 
