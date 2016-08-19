@@ -22,6 +22,12 @@ class Product extends Component {
         amount: this.state.amount-1
     })
   }
+  stock () {
+    if (this.state.amount === 0) {
+      return "Out of Stock"
+    }
+    return `Stock: ${this.state.amount}`
+  }
 
   clickHandler () {
     const { addCart } = this.props
@@ -35,7 +41,7 @@ class Product extends Component {
     return (
       <div className="product">
         <div>
-          <h3>{this.state.amount}</h3>
+          <h3>{this.stock()}</h3>
           <div>{name}</div>
           <img src={image}/>
           <h3>{price}</h3>
