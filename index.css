@@ -14,12 +14,17 @@ h1 {
 
 }
 
-img {
+.header-image {
   border-radius: 50%;
 }
 
 .product {
   display:inline-flex;
   flex-direction: column;
+
+}
+
+img {
+  height: 450px;
 
 }
