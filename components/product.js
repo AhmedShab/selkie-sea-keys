@@ -21,6 +21,7 @@ class Product extends Component {
         <div>
           <h1>{this.props.name}</h1>
           <img src={this.props.image}/>
+          <h3>{this.props.price}</h3>
         </div>
         <div>
           <button onClick={this.clickHandler}>Add To Cart</button>
