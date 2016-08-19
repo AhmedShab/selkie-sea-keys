@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 
 class CartList extends Component {
 
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     return (
       <div>
@@ -13,7 +9,6 @@ class CartList extends Component {
       </div>
     )
   }
-
 }
 
 export default CartList
