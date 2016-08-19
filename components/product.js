@@ -5,23 +5,40 @@ class Product extends Component {
 
   constructor (props) {
     super(props)
+    // cartProducts: [...this.state.cartProducts, product]
     // this.props.name = props.name
     // this.props.image = props.image
+    this.state = {
+      amount: 5
+    }
     this.clickHandler = this.clickHandler.bind(this)
   }
 
+  addToCart () {
+    if (this.state.amount === 0) {
+      return
+    }
+    this.setState({
+        amount: this.state.amount-1
+    })
+  }
+
   clickHandler () {
-    this.props.addCart(this)
+    const { addCart } = this.props
+    this.addToCart()
+    addCart(this)
   }
 
 
   render () {
+    const { name, price, image } = this.props
     return (
       <div className="product">
         <div>
-          <div>{this.props.name}</div>
-          <img src={this.props.image}/>
-          <h3>{this.props.price}</h3>
+          <h3>{this.state.amount}</h3>
+          <div>{name}</div>
+          <img src={image}/>
+          <h3>{price}</h3>
         </div>
         <div>
           <button onClick={this.clickHandler}>Add To Cart</button>
