@@ -26,9 +26,11 @@ class App extends Component {
     return (
       <div>
         <img src="./images/the-selkie.jpg" />
-        <h1>Welcome to {this.props.name}</h1>
+        <h1>Welcome to Selkie Sea Keys!</h1>
         <Cart items={this.state.cartProducts}/>
-        <Link to='/cartList'> Shopping Cart </Link>
+        <ul>
+          {this.state.cartProducts.map((product) => <li>{product.props.name}</li>)}
+        </ul>
         <Product name="Blackbeard's key" image='https://cdn-ssl.s7.disneystore.com/is/image/DisneyShopping/7509055880969?$yetidetail$'
                  addCart={this.addToCart} price='$5' amount={this.changeAmount}/>
         <Product name="API key" image='http://tattooos.org/wp-content/uploads/parser/Skull-Key-Tattoo-On-Back-1.jpeg'
