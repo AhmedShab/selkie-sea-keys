@@ -17,7 +17,7 @@ class Cart extends Component {
           aria-hidden='true'
           size='2x'
         />
-        <input type="text" />{items.length}
+        {items.length}
       </div>
     )
   }
