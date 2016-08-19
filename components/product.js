@@ -17,9 +17,9 @@ class Product extends Component {
 
   render () {
     return (
-      <div>
+      <div className="product">
         <div>
-          <h1>{this.props.name}</h1>
+          <div>{this.props.name}</div>
           <img src={this.props.image}/>
         </div>
         <div>

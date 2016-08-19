@@ -10,14 +10,15 @@ class Cart extends Component {
   render () {
     const { items } = this.props
     return (
-      <div>
+      <div id="shoppingCart">
+        {items.length}
         <FontAwesome
           name='fa-shopping-cart'
           className='fa fa-shopping-cart'
           aria-hidden='true'
           size='2x'
         />
-        {items.length}
+
       </div>
     )
   }

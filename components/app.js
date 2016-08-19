@@ -19,6 +19,7 @@ class App extends Component {
   render () {
     return (
       <div>
+        <img src="./images/the-selkie.jpg" />
         <h1>Welcome to {this.props.name}</h1>
         <Cart items={this.state.cartProducts}/>
         <Product name="Blackbeard's key" image='https://cdn-ssl.s7.disneystore.com/is/image/DisneyShopping/7509055880969?$yetidetail$' addCart={this.addToCart}/>
