@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/mandy-kate/selkie-sea-keys",
   "dependencies": {
+    "react-fontawesome": "^1.1.0",
     "watchify": "^3.7.0"
   },
   "devDependencies": {
