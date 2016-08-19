@@ -6,20 +6,18 @@ class App extends Component {
 
   constructor (props) {
     super(props)
-    this.state = {amount: [], cartProducts: []} 
+    this.state = {amount: 5, cartProducts: []}
     this.addToCart = this.addToCart.bind(this)
   }
 
   addToCart (product) {
+    conlsole.log("this is the amount", this.state.amount)
     this.setState({
-      cartProducts: [...this.state.cartProducts, product]
+      cartProducts: [...this.state.cartProducts, product],
+        amount: this.state.amount--
     })
   }
-  changeAmount () {
-    this.setState({
-      amount: [5]
-    })
-  }
+
 
   render () {
     return (
